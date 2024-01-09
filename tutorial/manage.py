@@ -5,6 +5,7 @@ import sys
 
 
 def main():
+    TODO: Currently this project cant see the new models in places this needs fixing before anything else
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tutorial.settings')
     try:
