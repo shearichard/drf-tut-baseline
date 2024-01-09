@@ -29,16 +29,6 @@ class SnippetHighlight(generics.GenericAPIView):
         return Response(snippet.highlighted)
 
 
-class UserList(generics.ListAPIView):
-	queryset = User.objects.all()
-	serializer_class = UserSerializer
-
-
-class UserDetail(generics.RetrieveAPIView):
-	queryset = User.objects.all()
-	serializer_class = UserSerializer
-
-
 class SnippetList(generics.ListCreateAPIView):
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
@@ -53,3 +43,14 @@ class SnippetDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = SnippetSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly,
                             IsOwnerOrReadOnly]
+
+class UserList(generics.ListAPIView):
+	queryset = User.objects.all()
+	serializer_class = UserSerializer
+
+
+class UserDetail(generics.RetrieveAPIView):
+	queryset = User.objects.all()
+	serializer_class = UserSerializer
+
+
