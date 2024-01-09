@@ -1,6 +1,6 @@
 #!/bin/sh
 
-git filter-branch --env-filter --force'
+git filter-branch --env-filter -f'
 
 OLD_EMAIL="richard.shea@nec.co.nz"
 CORRECT_NAME="Richard Shea"
